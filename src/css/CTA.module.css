@@ -1,0 +1,122 @@
+.ctaContainer {
+  background-color: var(--primary); 
+  padding: 5rem 2rem 0 2rem; 
+  overflow: hidden;
+  font-family: 'Inter', system-ui, sans-serif;
+clip-path: polygon(
+  0 0,
+  10% 0,
+  12% 5%,
+  38% 5%,
+  40% 0,
+  100% 0,
+  100% 100%,
+  0 100%
+);
+}
+
+.ctaContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 1rem
+}
+
+.textBlock {
+  flex: 1;
+  max-width: 550px;
+  padding-bottom: 5rem; 
+}
+
+.heading {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.2;
+  margin: 0 0 1.5rem 0;
+}
+
+.features {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.featureItem {
+  color: var(--secondary);
+  font-size: 1rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.checkIcon {
+  font-weight: 700;
+}
+
+.callButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: var(--secondary);
+  color: #ffffff;
+  padding: 0.75rem 1.7rem;
+  border-radius: 100px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.callButton:hover {
+  background-color: var(--secondary);
+}
+
+.phoneIconWrapper img{
+  
+  width: 28px;
+  height: 28px;
+  
+}
+
+.imageBlock {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  align-self: flex-end;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+}
+
+.mainImage {
+  width: 150%;
+  height: auto;
+  display: block;
+}
+
+
+@media (max-width: 968px) {
+  .ctaContent {
+    flex-direction: column;
+    text-align: center;
+    gap: 3rem;
+  }
+  .textBlock {
+    max-width: 100%;
+    padding-bottom: 0;
+  }
+  .features {
+    justify-content: center;
+  }
+  .imageBlock {
+    justify-content: center;
+    width: 100%;
+  }
+}

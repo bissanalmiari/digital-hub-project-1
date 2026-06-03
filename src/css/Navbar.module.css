@@ -1,0 +1,129 @@
+.navbar {
+  background: var(--primary);
+  
+}
+
+.brand {
+  color: var(--primary-foreground) !important;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.link {
+  color: var(--primary-foreground) !important;
+  opacity: 0.9;
+}
+
+.link:hover {
+  color: var(--secondary) !important;
+}
+.logo {
+  max-width: 140px;
+}
+
+.serviceLabel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--primary-foreground);
+  font-size: 15px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.redDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #e74c3c;
+  display: inline-block;
+  flex-shrink: 0;
+}
+.menuBtn {
+  display: none;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 28px;
+}
+
+.desktopMenu {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.drawer {
+  position: fixed;
+  top: 0;
+  right: -280px;
+  width: 280px;
+  height: 100vh;
+  background: var(--primary);
+  z-index: 2000;
+
+  display: flex;
+  flex-direction: column;
+  padding: 80px 30px;
+  gap: 30px;
+
+  transition: right 0.35s ease;
+}
+
+.open {
+  right: 0;
+}
+
+.drawer a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+
+  background: none;
+  border: none;
+  color: white;
+  font-size: 32px;
+  cursor: pointer;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.4);
+  z-index: 1999;
+}
+
+.mobileService {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: white;
+}
+
+@media (max-width: 991px) {
+
+  .desktopMenu {
+    display: none;
+  }
+
+  .menuBtn {
+    display: block;
+  }
+}
+
+@media (min-width: 992px) {
+
+  .drawer,
+  .overlay,
+  .menuBtn {
+    display: none;
+  }
+}

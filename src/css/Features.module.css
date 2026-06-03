@@ -1,0 +1,124 @@
+
+.section {
+  background: #14245c;
+  color: white;
+  margin: 100px 50px;
+  padding: 50px 24px; /* Added horizontal padding for mobile spacing inside the container */
+  border-radius: 25px;
+  
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 12%,
+    97% 18%,
+    97% 82%,
+    100% 88%,
+    100% 100%,
+    0 100%,
+    0 88%,
+    3% 82%,
+    3% 18%,
+    0 12%
+  );
+}
+
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  max-width: 500px;
+}
+
+.header p {
+  max-width: 500px;
+  color: var(--muted);
+}
+
+.line {
+  height: 1px;
+  background: var(--primary-accent);
+  opacity: 0.8;
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(300px, 500px));
+  justify-content: space-around;
+  gap: 40px; /* Separates the cards nicely in desktop view */
+}
+
+.feature {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  max-width: 500px;
+  gap: 20px;
+  align-items: center;
+}
+
+.feature h5 {
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin-bottom: 8px;
+}
+
+.feature p {
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.icon {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ==========================================================================
+   RESPONSIVE STYLES (Mobile Layout matching your screenshot)
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  .section {
+    margin: 40px 16px; /* Reduced outer margin so it fits nicely on narrow phone screens */
+    padding: 40px 16px;
+    clip-path: none;    /* Optional: complex clip-paths can clip content on very narrow viewports */
+  }
+
+  .header {
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+  }
+
+  .title {
+    font-size: 1.75rem; /* Scales header down cleanly for mobile view */
+  }
+
+  .line {
+    margin-bottom: 40px;
+  }
+
+  .row {
+    grid-template-columns: 1fr; /* Switch from 2 columns to 1 single column */
+    gap: 48px;                  /* Creates the vertical spacing visible between sections in the screenshot */
+  }
+
+  .feature {
+    flex-direction: column;    /* Stack icon on top of text */
+    text-align: center;        /* Centered alignment like the image */
+    gap: 16px;
+  }
+}

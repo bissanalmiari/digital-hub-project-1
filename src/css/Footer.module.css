@@ -1,0 +1,291 @@
+/* ==========================================================================
+   DESKTOP STYLES
+   ========================================================================== */
+
+.footerContainer {
+  background-color: var(--secondary); 
+  padding: 4rem 2rem;
+  padding-bottom: 0%;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+.innerContent {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.newsletterCard {
+  background-color: var(--secondary-foreground);
+  border-radius: 24px;
+  padding: 2.5rem 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.newsletterTitle {
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+}
+
+.newsletterSubtitle {
+  color: #ffffff;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.subscribeForm {
+  display: flex;
+  background-color: #ffffff;
+  padding: 0.4rem;
+  border-radius: 100px;
+  width: 100%;
+  max-width: 420px;
+}
+
+.emailInput {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 0 1.25rem;
+  font-size: 0.95rem;
+  color: var(--primary);
+}
+
+.emailInput::placeholder {
+  color: var(--muted);
+}
+
+.subscribeBtn {
+  background-color: var(--secondary);
+  color: #ffffff;
+  border: none;
+  outline: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 100px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.subscribeBtn:hover {
+  opacity: 0.9;
+}
+
+.mainFooterGrid {
+  display: grid;
+  grid-template-columns: 2fr repeat(2, 1fr);
+  gap: 4rem;
+  padding-top: 3rem;
+ 
+}
+
+.brandBlock {
+  max-width: 360px;
+  margin-top: -20px;
+}
+
+.logoRow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #ffffff;
+  margin-bottom: 1.25rem;
+}
+
+.logoText {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.brandDesc {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.socialsList {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.socialsList img {
+  width: 24px;
+  height: 24px;
+}
+
+.linksMenu {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.menuHeader {
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+}
+
+.menuLink {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+.rights{
+    margin-top: 20px;
+    border-top: 1px solid var(--secondary-foreground);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    
+}
+/* ==========================================================================
+   MOBILE FOOTER RESPONSIEVNESS (Matches uploaded mobile screenshot perfectly)
+   ========================================================================== */
+@media (max-width: 868px) {
+  .footerContainer {
+    /* Color sampled directly from your screenshot image */
+   
+    padding: 2.5rem 1.25rem;
+    text-align: center;
+  }
+
+  /* Transparent overlay card wrapper matching image */
+  .newsletterCard {
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.18); 
+    padding: 2rem 1.5rem;
+    gap: 1.5rem;
+    border-radius: 24px;
+    margin-bottom: 2.5rem;
+  }
+
+  .newsletterTitle {
+    font-size: 1.4rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .newsletterSubtitle {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    opacity: 0.9;
+  }
+
+  /* Single pill container for form containing both inputs */
+  .subscribeForm {
+    max-width: 100%;
+    background-color: #ffe6e6; /* The light tint visible inside the design field */
+    border-radius: 100px;
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.35rem;
+  }
+
+  .emailInput {
+    padding: 0 1rem;
+    font-size: 0.9rem;
+    width: 60%;
+  }
+
+  .emailInput::placeholder {
+    color: #a5a5a5;
+  }
+
+  .subscribeBtn {
+   
+    color: white;
+    padding: 0.65rem 1.25rem;
+    font-size: 0.85rem;
+    border-radius: 100px;
+  }
+
+  /* The layout wrapper containing brandBlock, Company, and Legal items */
+  .mainFooterGrid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding-top: 0;
+    border-top: none;
+  }
+
+  .brandBlock {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logoRow {
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+
+  .logoText {
+    font-size: 1.75rem;
+  }
+
+  .brandDesc {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+    max-width: 320px;
+  }
+
+  .socialsList {
+    justify-content: center;
+    gap: 1.5rem;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  /* CRITICAL FIX: 
+     Force the link selectors to sit side-by-side on mobile, 
+     but allow items inside to align left naturally.
+  */
+  .mainFooterGrid > .linksMenu:nth-of-type(1),
+  .mainFooterGrid > .linksMenu:nth-of-type(2) {
+    display: inline-flex;
+    flex-direction: column;
+    width: 45%; /* Allocates clean width columns */
+    text-align: left; /* Left align text inside lists */
+    align-items: flex-start;
+  }
+
+  /* Creates the horizontal 2-column container rule on small devices */
+  .mainFooterGrid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  /* Keeps brand block full width across the top layer before the links grid */
+  .brandBlock {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  .menuHeader {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .menuLink {
+    font-size: 1rem;
+    padding: 0.25rem 0;
+    
+  }
+  .linksMenu{
+    padding: 0 50px;
+  }
+}
