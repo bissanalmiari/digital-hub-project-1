@@ -1,17 +1,34 @@
 :root {
-  --background: #fff;
-  --foreground: #000;
+ 
+  --background: #ffffff;
+  --foreground: #0f172a;
 
+  
   --primary: #142257;
   --primary-accent: #1f3584;
-  --primary-foreground: #fff;
-  --primary-muted: #9ea3b5;
+  --primary-foreground: #ffffff;
 
   --secondary: #15b2f5;
-  --secondary-foreground: #4AC9FF;
+  --secondary-foreground: #4ac9ff;
 
+  
   --surface: #f3f5f9;
   --surface-foreground: #545971;
 
+
   --muted: #666b86;
+  --text-light: #94a3b8;
+  --text-medium: #64748b;
+  --text-dark: #475569;
+
+ 
+  --white: #ffffff;
+  --border-light: rgba(255,255,255,0.15);
+}
+:root {
+  --font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+html,
+body {
+  font-family: var(--font-family);
 }

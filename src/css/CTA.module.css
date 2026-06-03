@@ -2,7 +2,7 @@
   background-color: var(--primary); 
   padding: 5rem 2rem 0 2rem; 
   overflow: hidden;
-  font-family: 'Inter', system-ui, sans-serif;
+   font-family: var(--font-family);
 clip-path: polygon(
   0 0,
   10% 0,
@@ -33,7 +33,7 @@ clip-path: polygon(
 .heading {
   font-size: 3rem;
   font-weight: 700;
-  color: #ffffff;
+   color: var(--primary-foreground);
   line-height: 1.2;
   margin: 0 0 1.5rem 0;
 }
@@ -62,7 +62,7 @@ clip-path: polygon(
   align-items: center;
   gap: 1rem;
   background-color: var(--secondary);
-  color: #ffffff;
+  color: var(--primary-foreground);
   padding: 0.75rem 1.7rem;
   border-radius: 100px;
   font-weight: 600;

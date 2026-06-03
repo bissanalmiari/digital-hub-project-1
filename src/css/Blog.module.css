@@ -3,7 +3,7 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 5rem 2rem;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: var(--font-family);
 
 }
 
@@ -15,7 +15,7 @@
 .mainTitle {
   font-size: 2.5rem;
   font-weight: 700;
-  color: black; 
+  color: var(--foreground); 
   margin: 0 0 1rem 0;
 }
 
@@ -37,7 +37,7 @@
 .card {
   display: flex;
   flex-direction: column;
-  background: #ffffff;
+  background: var(--background);
   border-radius: 20px;
   overflow: hidden;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -68,7 +68,7 @@
 
 .date {
   font-size: 0.85rem;
-  color: #94a3b8;
+ color: var(--text-light);
   display: block;
   margin-bottom: 0.75rem;
 }
@@ -76,7 +76,7 @@
 .cardTitle {
   font-size: 1.25rem;
   font-weight: 700;
-  color: #0f172a;
+   color: var(--foreground);
   line-height: 1.4;
   margin: 0 0 0.75rem 0;
 
@@ -97,7 +97,6 @@
   overflow: hidden;
 }
 
-/* Tags Container */
 .tagContainer {
   display: flex;
   flex-wrap: wrap;
@@ -108,7 +107,7 @@
   font-size: 0.75rem;
   font-weight: 500;
   color: var(--muted);
-  background-color: #f1f5f9; 
+background-color: var(--surface);
   padding: 0.35rem 0.75rem;
   border-radius: 100px;
 }

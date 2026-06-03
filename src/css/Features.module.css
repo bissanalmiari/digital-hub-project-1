@@ -1,11 +1,11 @@
-
 .section {
-  background: #14245c;
-  color: white;
+  background: var(--primary);
+  color: var(--primary-foreground);
   margin: 100px 50px;
-  padding: 50px 24px; /* Added horizontal padding for mobile spacing inside the container */
+  padding: 50px 24px;
   border-radius: 25px;
-  
+  font-family: var(--font-family);
+
   clip-path: polygon(
     0 0,
     100% 0,
@@ -33,6 +33,7 @@
   font-size: 2.5rem;
   font-weight: 700;
   max-width: 500px;
+  color: var(--primary-foreground);
 }
 
 .header p {
@@ -52,7 +53,7 @@
   display: grid;
   grid-template-columns: repeat(2, minmax(300px, 500px));
   justify-content: space-around;
-  gap: 40px; /* Separates the cards nicely in desktop view */
+  gap: 40px;
 }
 
 .feature {
@@ -68,6 +69,7 @@
   font-weight: 600;
   font-size: 1.25rem;
   margin-bottom: 8px;
+  color: var(--primary-foreground);
 }
 
 .feature p {
@@ -86,15 +88,11 @@
   flex-direction: column;
 }
 
-/* ==========================================================================
-   RESPONSIVE STYLES (Mobile Layout matching your screenshot)
-   ========================================================================== */
-
 @media (max-width: 768px) {
   .section {
-    margin: 40px 16px; /* Reduced outer margin so it fits nicely on narrow phone screens */
+    margin: 40px 16px;
     padding: 40px 16px;
-    clip-path: none;    /* Optional: complex clip-paths can clip content on very narrow viewports */
+    clip-path: none;
   }
 
   .header {
@@ -104,7 +102,7 @@
   }
 
   .title {
-    font-size: 1.75rem; /* Scales header down cleanly for mobile view */
+    font-size: 1.75rem;
   }
 
   .line {
@@ -112,13 +110,13 @@
   }
 
   .row {
-    grid-template-columns: 1fr; /* Switch from 2 columns to 1 single column */
-    gap: 48px;                  /* Creates the vertical spacing visible between sections in the screenshot */
+    grid-template-columns: 1fr;
+    gap: 48px;
   }
 
   .feature {
-    flex-direction: column;    /* Stack icon on top of text */
-    text-align: center;        /* Centered alignment like the image */
+    flex-direction: column;
+    text-align: center;
     gap: 16px;
   }
 }

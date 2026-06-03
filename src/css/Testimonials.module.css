@@ -15,7 +15,7 @@
 h2 {
   font-weight: 900;
   margin-bottom: 40px;
-  color: #14245c;
+   color: var(--primary);
 }
 
 .line {
@@ -58,12 +58,12 @@ h2 {
 }
 
 .name {
-  color: #14245c;
+   color: var(--primary);
   font-weight: 700;
   margin: 0;
 }
 
-/* Controls Alignment */
+
 .controlsRow {
   display: flex;
   align-items: center;
@@ -85,7 +85,6 @@ h2 {
   justify-content: center;
 }
 
-/* Desktop Absolute layout setup */
 @media (min-width: 869px) {
   .controlsRow {
     position: absolute;
@@ -96,14 +95,14 @@ h2 {
   .leftArrow {
     position: absolute;
     left: -120px;
-    background: #eef1f7;
+    background: var(--surface);
     color: #aab2c5;
   }
   .rightArrow {
     position: absolute;
     right: -120px;
-    background: #20b4f3;
-    color: white;
+    background: var(--secondary);
+    color: var(--primary-foreground);
   }
 }
 
@@ -117,24 +116,20 @@ h2 {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: #d7dce7;
+   background: var(--text-light);
 }
 
 .active {
   width: 24px;
   border-radius: 20px;
-  background: #20b4f3;
+  background: var(--secondary);
 }
 
-/* ==========================================================
-   MOBILE TESTIMONIALS (Matching Screenshot 2026-06-03 000057.png)
-   ========================================================== */
 @media (max-width: 868px) {
   h2 {
     font-size: 1.6rem;
   }
-  
-  /* Layout matches your image exactly: Left Arrow -> Dots -> Right Arrow */
+
   .controlsRow {
     display: flex;
     flex-direction: row; 

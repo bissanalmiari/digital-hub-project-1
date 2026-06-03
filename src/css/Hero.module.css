@@ -1,31 +1,31 @@
 .hero {
   background: var(--primary);
   color: var(--primary-foreground);
+  font-family: var(--font-family);
   min-height: 100vh;
   display: flex;
   align-items: center;
-  
-  overflow: hidden; 
-   clip-path: polygon(
+  overflow: hidden;
+
+  clip-path: polygon(
     0 0,
-  100% 0,
-  100% 95%,
-  75% 95%,
-  70% 100%,
-  30% 100%,
-  25% 95%,
-  0 95%
-);
-margin-top:-10px;
+    100% 0,
+    100% 95%,
+    75% 95%,
+    70% 100%,
+    30% 100%,
+    25% 95%,
+    0 95%
+  );
+
+  margin-top: -10px;
 }
 
 .heroGrid {
   display: grid;
   grid-template-columns: 300px 1fr 300px;
   gap: 50px;
-
 }
-
 
 .imageCard {
   position: relative;
@@ -38,11 +38,6 @@ margin-top:-10px;
   height: 100%;
   object-fit: cover;
   display: block;
-}
-.imageCard {
-  position: relative;
-  overflow: hidden;
-  border-radius: 25px;
 }
 
 .imageCard::after {
@@ -65,6 +60,7 @@ margin-top:-10px;
 
   pointer-events: none;
 }
+
 .content {
   text-align: center;
 }
@@ -82,7 +78,6 @@ margin-top:-10px;
   line-height: 1.15;
   margin-bottom: 30px;
 }
-
 
 .benefits {
   display: flex;
@@ -125,27 +120,24 @@ margin-top:-10px;
   text-align: center;
   font-size: 15px;
   color: var(--primary-foreground);
- 
-  
-  
 }
 
 .featureItem {
   display: flex;
   align-items: center;
   gap: 10px;
-  
+}
 
-}
 .featureItem span {
- max-width: 100px;
+  max-width: 100px;
 }
+
 .imgCont {
   width: 40px;
   height: 40px;
- background: #1F3584;
+  background: var(--primary-accent);
   border-radius: 50%;
- display: flex;
+  display: flex;
   align-items: center;
   justify-content: center;
 }
@@ -153,100 +145,4 @@ margin-top:-10px;
 .featureIcon {
   font-size: 22px;
   opacity: 0.9;
-}
-@media (max-width: 1200px) {
-
-  .hero {
-    min-height: auto;
-    padding: 120px 0 100px;
-    clip-path: polygon(
-      0 0,
-      100% 0,
-      100% 97%,
-      70% 97%,
-      65% 100%,
-      35% 100%,
-      30% 97%,
-      0 97%
-    );
-  }
-
-  .heroGrid {
-    grid-template-columns: 1fr;
-    gap: 25px;
-  }
-
-  .imageCard {
-    display: none;
-  }
-
-  .content {
-    text-align: center;
-  }
-
-  .title {
-    font-size: 2.2rem;
-    line-height: 1.3;
-  }
-
-  .subtitle {
-    font-size: 14px;
-  }
-
-  .benefits {
-    flex-direction: column;
-    gap: 8px;
-    align-items: center;
-  }
-
-  .callBtn {
-    font-size: 16px;
-    padding: 14px 14px 14px 25px;
-  }
-
-  .phoneIcon {
-    width: 34px;
-    height: 34px;
-  }
-
-  .features {
-    margin-top: 50px;
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap: 20px;
-  }
-
-  .featureItem {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .featureItem span {
-    max-width: 100%;
-    font-size: 14px;
-  }
-}
-@media (max-width: 576px) {
-
-  .hero {
-    padding-top: 90px;
-  }
-
-  .title {
-    font-size: 1.9rem;
-  }
-
-  .subtitle {
-    font-size: 13px;
-  }
-
-  .callBtn {
-    width: 100%;
-    justify-content: center;
-  }
-
-  .features {
-    grid-template-columns: repeat(2,1fr);
-    gap: 15px;
-  }
 }

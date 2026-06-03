@@ -1,12 +1,10 @@
-/* ==========================================================================
-   DESKTOP STYLES
-   ========================================================================== */
+
 
 .footerContainer {
   background-color: var(--secondary); 
   padding: 4rem 2rem;
-  padding-bottom: 0%;
-  font-family: 'Inter', system-ui, sans-serif;
+  
+  font-family: var(--font-family);
 }
 
 .innerContent {
@@ -26,21 +24,21 @@
 }
 
 .newsletterTitle {
-  color: #ffffff;
+  color: var(--primary-foreground);
   font-size: 1.5rem;
   font-weight: 700;
   margin: 0 0 0.5rem 0;
 }
 
 .newsletterSubtitle {
-  color: #ffffff;
+  color: var(--primary-foreground);
   font-size: 0.95rem;
   margin: 0;
 }
 
 .subscribeForm {
   display: flex;
-  background-color: #ffffff;
+  background-color: var(--background);
   padding: 0.4rem;
   border-radius: 100px;
   width: 100%;
@@ -63,7 +61,7 @@
 
 .subscribeBtn {
   background-color: var(--secondary);
-  color: #ffffff;
+  color: var(--primary-foreground);
   border: none;
   outline: none;
   padding: 0.75rem 1.5rem;
@@ -94,7 +92,7 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  color: #ffffff;
+  color: var(--primary-foreground);
   margin-bottom: 1.25rem;
 }
 
@@ -104,7 +102,7 @@
 }
 
 .brandDesc {
-  color: rgba(255, 255, 255, 0.85);
+   color: var(--primary-foreground);
   font-size: 0.95rem;
   line-height: 1.6;
   margin-bottom: 1.5rem;
@@ -127,37 +125,33 @@
 }
 
 .menuHeader {
-  color: #ffffff;
+ color: var(--primary-foreground);
   font-size: 1.1rem;
   font-weight: 700;
   margin: 0 0 0.5rem 0;
 }
 
 .menuLink {
-  color: rgba(255, 255, 255, 0.85);
+   color: var(--primary-foreground);
   text-decoration: none;
   font-size: 0.95rem;
 }
 .rights{
-    margin-top: 20px;
+    margin-top: 50px;
     border-top: 1px solid var(--secondary-foreground);
-    color: white;
-    padding: 20px;
+    color: var(--primary-foreground);
+    padding-top: 20px;
+    
     text-align: center;
     
 }
-/* ==========================================================================
-   MOBILE FOOTER RESPONSIEVNESS (Matches uploaded mobile screenshot perfectly)
-   ========================================================================== */
+
 @media (max-width: 868px) {
   .footerContainer {
-    /* Color sampled directly from your screenshot image */
-   
     padding: 2.5rem 1.25rem;
     text-align: center;
   }
 
-  /* Transparent overlay card wrapper matching image */
   .newsletterCard {
     flex-direction: column;
     background-color: rgba(255, 255, 255, 0.18); 
@@ -178,10 +172,9 @@
     opacity: 0.9;
   }
 
-  /* Single pill container for form containing both inputs */
   .subscribeForm {
     max-width: 100%;
-    background-color: #ffe6e6; /* The light tint visible inside the design field */
+    background-color: #ffe6e6; 
     border-radius: 100px;
     display: flex;
     flex-direction: row; 
@@ -202,13 +195,12 @@
 
   .subscribeBtn {
    
-    color: white;
+    color: var(--primary-foreground);
     padding: 0.65rem 1.25rem;
     font-size: 0.85rem;
     border-radius: 100px;
   }
 
-  /* The layout wrapper containing brandBlock, Company, and Legal items */
   .mainFooterGrid {
     display: flex;
     flex-direction: column;
@@ -248,20 +240,15 @@
     margin-bottom: 1rem;
   }
 
-  /* CRITICAL FIX: 
-     Force the link selectors to sit side-by-side on mobile, 
-     but allow items inside to align left naturally.
-  */
   .mainFooterGrid > .linksMenu:nth-of-type(1),
   .mainFooterGrid > .linksMenu:nth-of-type(2) {
     display: inline-flex;
     flex-direction: column;
-    width: 45%; /* Allocates clean width columns */
-    text-align: left; /* Left align text inside lists */
+    width: 45%; 
+    text-align: left;
     align-items: flex-start;
   }
 
-  /* Creates the horizontal 2-column container rule on small devices */
   .mainFooterGrid {
     display: flex;
     flex-direction: row;
@@ -269,7 +256,6 @@
     justify-content: space-between;
   }
 
-  /* Keeps brand block full width across the top layer before the links grid */
   .brandBlock {
     width: 100%;
     margin-bottom: 0.5rem;

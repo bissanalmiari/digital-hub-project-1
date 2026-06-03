@@ -1,6 +1,6 @@
 .section {
-  
   background: var(--background);
+  font-family: var(--font-family);
 }
 
 .title {
@@ -11,17 +11,13 @@
 }
 
 .card {
-  
   padding: 2rem;
-  
   height: 100%;
-display: flex;
-justify-content: center;
-flex-direction: column;
-align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
-
-
 
 .icon {
   color: var(--primary);
@@ -37,45 +33,52 @@ align-items: center;
 .card p {
   color: var(--muted);
 }
-.content{
-    color:var(--muted);
-    max-width: 500px;
-    justify-self: center;
-    margin-bottom: 2rem;
+
+.content {
+  color: var(--muted);
+  max-width: 500px;
+  justify-self: center;
+  margin-bottom: 2rem;
 }
-.imgCont{
-    width:70px;
-    height: 70px;
-    background: var(--primary);
-    border-radius: 25px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+.imgCont {
+  width: 70px;
+  height: 70px;
+  background: var(--primary);
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.more{
-border-radius: 25px;
-background-color: var(--secondary);
-padding: 30px;
-color: var(--primary-foreground);
-display: flex;
-justify-content: center;
-align-items: center;
-flex-direction: column;
+
+.more {
+  border-radius: 25px;
+  background-color: var(--secondary);
+  padding: 30px;
+  color: var(--primary-foreground);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-.more h3{
-    font-weight: 500;
+
+.more h3 {
+  font-weight: 500;
 }
-.more p{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    max-width: 250px;
-    text-align: center;
-    margin-bottom: 25px;
+
+.more p {
+  color: var(--primary-foreground);
+  max-width: 250px;
+  text-align: center;
+  margin-bottom: 25px;
 }
-.more button{
-    border:none;
-    border-radius:50px ;
-    padding: 10px 40px;
-    color: var(--secondary);
-    font-size: larger;
-    font-weight: 600;
+
+.more button {
+  border: none;
+  border-radius: 50px;
+  padding: 10px 40px;
+  background: var(--white);
+  color: var(--secondary);
+  font-size: larger;
+  font-weight: 600;
 }

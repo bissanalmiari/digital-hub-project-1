@@ -1,6 +1,6 @@
 .navbar {
   background: var(--primary);
-  
+  font-family: var(--font-family);
 }
 
 .brand {
@@ -17,6 +17,7 @@
 .link:hover {
   color: var(--secondary) !important;
 }
+
 .logo {
   max-width: 140px;
 }
@@ -39,11 +40,12 @@
   display: inline-block;
   flex-shrink: 0;
 }
+
 .menuBtn {
   display: none;
   background: transparent;
   border: none;
-  color: white;
+  color: var(--primary-foreground);
   font-size: 28px;
 }
 
@@ -61,12 +63,10 @@
   height: 100vh;
   background: var(--primary);
   z-index: 2000;
-
   display: flex;
   flex-direction: column;
   padding: 80px 30px;
   gap: 30px;
-
   transition: right 0.35s ease;
 }
 
@@ -75,7 +75,7 @@
 }
 
 .drawer a {
-  color: white;
+  color: var(--primary-foreground);
   text-decoration: none;
   font-size: 18px;
   font-weight: 500;
@@ -85,10 +85,9 @@
   position: absolute;
   top: 20px;
   right: 20px;
-
   background: none;
   border: none;
-  color: white;
+  color: var(--primary-foreground);
   font-size: 32px;
   cursor: pointer;
 }
@@ -105,11 +104,10 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  color: white;
+  color: var(--primary-foreground);
 }
 
 @media (max-width: 991px) {
-
   .desktopMenu {
     display: none;
   }
@@ -120,7 +118,6 @@
 }
 
 @media (min-width: 992px) {
-
   .drawer,
   .overlay,
   .menuBtn {
